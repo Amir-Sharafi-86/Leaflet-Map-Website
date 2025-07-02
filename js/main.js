@@ -22,7 +22,6 @@ searchBtn.addEventListener("click" , async () => {
     console.log();
       
     const findItem =  data.find(item => {
-      console.log(item);
       
       return item.name === inputValue
     })    
@@ -42,8 +41,19 @@ searchBtn.addEventListener("click" , async () => {
   
 })
 
+const getAllItem = async () => {
+  const res = await fetch('map.json');
+  const data = await res.json();
 
+  data.forEach(item => {
+    const marker = L.marker([item.lat, item.lng]).addTo(map);
+    marker.bindPopup(`<b>${item.name}</b>`); // نمایش نام در popup
+  });
+};
 
+window.addEventListener("load" , () => {
+  getAllItem() ;
+})
 // const shops = [
 //   {
 //       position: [29.6015588126909, 52.562343568182996],
