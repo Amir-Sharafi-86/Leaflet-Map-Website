@@ -9,6 +9,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const searchBtn = document.querySelector("#search-btn")
 const search__input = document.querySelector("#search-input")
+const errorMessage = document.querySelector("p")
 
 searchBtn.addEventListener("click" , async () => {
   const inputValue = search__input.value.trim() 
@@ -35,7 +36,7 @@ searchBtn.addEventListener("click" , async () => {
               .openPopup();
     }    
      else {
-      alert("not found ")
+      errorMessage.style.display = "block"
     }
   }
   
