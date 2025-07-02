@@ -30,4 +30,4 @@ This project has a Map.json folder to get data, for example, from an API, and sh
 ## Demo Project 
 <img src="./Demo/Screenshot (256).png"/>
 <img src="./Demo/Screenshot (257).png"/>
-<img src="./Demo/Screenshot (258).png"/>
+<img src="./Demo/Screenshot (259).png"/>
