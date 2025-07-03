@@ -27,10 +27,8 @@ searchBtn.addEventListener("click" , async () => {
       return item.name === inputValue
     })    
     if(findItem) {
-            // حرکت نقشه به مختصات مورد نظر با زوم 16
             map.setView([findItem.lat, findItem.lng], 16);
 
-            // اضافه کردن مارکر روی محل
             L.marker([findItem.lat, findItem.lng]).addTo(map)
               .bindPopup(findItem.name)
               .openPopup();
@@ -55,6 +53,9 @@ const getAllItem = async () => {
 window.addEventListener("load" , () => {
   getAllItem() ;
 })
+
+// data shops 
+
 // const shops = [
 //   {
 //       position: [29.6015588126909, 52.562343568182996],
